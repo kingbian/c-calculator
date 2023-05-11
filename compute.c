@@ -1,21 +1,22 @@
 #include <stdio.h>
 
-int compute(char input[]) {
+int compute(char input[])
+{
 
     // convert the asci values into an int
-    int a = input[0] - '0'; 
+    int a = input[0] - '0';
     int b = input[1] - '0';
 
-    return  a+b;
-
+    return a + b;
 }
+// main
+void main()
+{
+    char input[10];
+    printf("Enter a equation: ");
+    scanf("%s", input);
 
-    void main() {
-        char input[10];
-        printf("Enter a equation: ");
-        scanf("%s", input);
-        
-        int result = compute(input);
+    int result = compute(input);
 
-        printf("your answer is: %d\n", result);
-    }
+    printf("your answer is: %d\n", result);
+}
