@@ -6,57 +6,77 @@ int compute(char operator, int a, int b);
 void main()
 {
     char operator;
-    int first, second;
+    int first, second, check;
 
     printf("Enter first number: ");
-    scanf("%i", &first);
+    check = scanf("%d", &first);
 
-    int a = first;
+    while (check != 1)
+    {
+        while (getchar() != '\n')
+        { /* clear the buffer*/
+            continue;
+        }
+        printf("Enter a valid integer: ");
+        check = scanf("%d", &first);
+    }
 
     printf("Enter second number: ");
-    scanf("%d", &second);
+    check = scanf("%d", &second);
+    while (check != 1)
+    {
+        while (getchar() != '\n')
+        { /* clear the buffer*/
+            continue;
+        }
+        printf("Enter a valid integer: ");
+        check = scanf("%d", &second);
+    }
 
     printf("Enter operator: ");
     scanf("%s", &operator);
 
-   /*printf("%i b: %d\n", first, second);*/
+    /*printf("%i b: %d\n", first, second);*/
 
-    int ans = compute(operator, a, second);
+    int ans = compute(operator, first, second);
 
-    if ( ans !=-1){
-        printf("%d %c %d is: %d\n",a, operator, second, ans);
+    if (ans != -1)
+    {
+        printf("%d %c %d is: %d\n", first, operator, second, ans);
     }
-    else{
+    else
+    {
         printf("%c is an invalid operator!!\n", operator);
     }
-
 }
 
 /*
     compute the calculation
 */
 
-int compute(char operator, int a, int b){
+int compute(char operator, int a, int b)
+{
 
-    switch(operator){
-        case '+':
-            return a+b;
-            break;
-        case '-':
-            return a-b;
-            break;
-        case '/':
-            if(b<=0){
-                printf("Unable to divide by 0!!\n");
-                exit(1);
-            }
-            return a/b;
-            break;
-        case '*':
-            return a*b;
-            break;
-        default:
-            return -1;
+    switch (operator)
+    {
+    case '+':
+        return a + b;
+        break;
+    case '-':
+        return a - b;
+        break;
+    case '/':
+        if (b <= 0)
+        {
+            printf("Unable to divide by 0!!\n");
+            exit(1);
+        }
+        return a / b;
+        break;
+    case '*':
+        return a * b;
+        break;
+    default:
+        return -1;
     }
-
 }
