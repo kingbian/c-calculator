@@ -12,9 +12,12 @@ The program demonstrates the usage of functions, switch statements, and user inp
 
 To run the calculator program, follow these steps:
 
-1. Make sure you have a C compiler installed on your system, such as GCC or Clang.
+1. Make sure you have a C compiler installed on your system, such as GCC.
 2. Clone this repository to your local machine or download the source code files.
 3. Compile the program using the C compiler. For example, using GCC:
+ ```
+ gcc calculator.c -o calculator
+ ```
 4. Run the compiled executable:
 5. Follow the instructions on the screen to perform calculations using the calculator.
 
