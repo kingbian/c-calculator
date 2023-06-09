@@ -1,10 +1,10 @@
 # Simple Calculator in C
 
-This is a simple calculator program written in the C programming language. Its purpose is to serve as a learning resource for beginners who want to learn C programming.
+This is a simple calculator program written in the C programming language. It is a proigram to help me learn C.
 
 ## Description
 
-The calculator program allows users to perform basic arithmetic calculations, including addition, subtraction, multiplication, and division. It takes two integer inputs from the user and an operator (+, -, *, /) to perform the calculation. The result is then displayed on the screen.
+The program allows users to perform basic arithmetic calculations, including addition, subtraction, multiplication, and division. It takes two integer inputs from the user and an operator (+, -, *, /) to perform the calculation. The result is then printed to the console.
 
 The program demonstrates the usage of functions, switch statements, and user input/output in C. It also includes error handling for invalid operators.
 
