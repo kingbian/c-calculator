@@ -1,22 +1,57 @@
 #include <stdio.h>
 
-int compute(char input[])
-{
+int compute(char operator, int a, int b);
 
-    // convert the asci values into an int
-    int a = input[0] - '0';
-    int b = input[1] - '0';
-
-    return a + b;
-}
-// main
+/*main*/
 void main()
 {
-    char input[10];
-    printf("Enter a equation: ");
-    scanf("%s", input);
+    char operator;
+    int first, second;
 
-    int result = compute(input);
+    printf("Enter first number: ");
+    scanf("%i", &first);
 
-    printf("your answer is: %d\n", result);
+    int a = first;
+
+    printf("Enter second number: ");
+    scanf("%d", &second);
+
+    printf("Enter operator: ");
+    scanf("%s", &operator);
+
+   /*printf("%i b: %d\n", first, second);*/
+
+    int ans = compute(operator, a, second);
+
+    if ( ans !=-1){
+        printf("%d %c %d is: %d\n",a, operator, second, ans);
+    }else{
+        printf("%c is an invalid operator!!\n", operator);
+    }
+
+}
+
+/*
+    compute the calculation
+*/
+
+int compute(char operator, int a, int b){
+
+    switch(operator){
+        case '+':
+            return a+b;
+            break;
+        case '-':
+            return a-b;
+            break;
+        case '/':
+            return a/b;
+            break;
+        case '*':
+            return a*b;
+            break;
+        default:
+            return -1;
+    }
+
 }
