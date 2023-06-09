@@ -25,7 +25,8 @@ void main()
 
     if ( ans !=-1){
         printf("%d %c %d is: %d\n",a, operator, second, ans);
-    }else{
+    }
+    else{
         printf("%c is an invalid operator!!\n", operator);
     }
 
@@ -45,6 +46,10 @@ int compute(char operator, int a, int b){
             return a-b;
             break;
         case '/':
+            if(b<=0){
+                printf("Unable to divide by 0!!\n");
+                exit(1);
+            }
             return a/b;
             break;
         case '*':
