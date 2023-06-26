@@ -1,6 +1,6 @@
 # Simple Calculator in C
 
-This is a simple calculator program written in the C programming language. It is a proigram to help me learn C.
+This is a simple calculator program written in the C programming language. It is a program to help me learn C.
 
 ## Description
 
